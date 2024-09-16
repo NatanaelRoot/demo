@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="img/yoma.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Youtube TV</title>
+</head>
+
+<body id="body">
+
+    <div class="preloader-container">
+        <img src="img/logosiosichico.png" alt="" class="preloader__img">
+        <div class="loader">
+            <span class="loader-name">
+
+            </span>
+        </div>
+    </div>
+
+    <div class="add-account">
+        <button class="add-account__arrow">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="add-account__arrow--x">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="add-account__container">
+            <div class="add-account__item">
+                <figure class="add-account__img-container">
+                    <img src="img/tv-logo.png" alt="" class="add-account__img">
+                </figure>
+                <div class="add-account__title-container">
+                    <span class="add-account__title">
+                        Accede con tu
+                    </span>
+                    <span class="add-account__title">
+                        Cuenta de Google
+                    </span>
+                </div>
+                <div class="add-account__text-container">
+                    <p class="add-account__text">
+                        Si accedes a tu cuenta, encontraras todos los videos y canales que te encantan, sin ver los de
+                        los demas.
+                    </p>
+                </div>
+                <div class="add-account__btn-container">
+                    <button class="add-account__btn">
+                        <i class="fa-solid fa-computer"></i>
+                        Escanear o ingresar un codigo
+                    </button>
+                    <button class="add-account__btn">
+                        <i class="fa-regular fa-keyboard"></i>
+                        Usar el control remoto
+                    </button>
+                    <button class="add-account__btn">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Abrir la app de YouTube
+                    </button>
+                </div>
+            </div>
+            <div class="add-account__item">
+                <figure class="add-account__img-qr-container">
+                    <img src="img/youtube-qr.png" alt="" class="add-account__img-qr">
+                </figure>
+                <div class="add-account__info-container">
+                    <span class="add-account__info">
+                        Escanea el codigo con tu telefono o ve a
+                    </span>
+                    <span class="add-account__info add-account__info--qr">
+                        yt.be/activate
+                    </span>
+                </div>
+                <div class="add-account__info-container">
+                    <span class="add-account__info">
+                        Ingrese el siguiente codigo
+                    </span>
+                    <span class="add-account__info add-account__info--qr">
+                        CZH-NKK-JGQG
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="remove-account">
+        <div class="remove-account__container">
+            <button class="remove-account__btn-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="remove-account__information-container">
+                <div class="remove-account__text-container">
+                    <span class="remove-account__title">Quitar cuenta</span>
+                    <span class="remove-account__text">Saldras de tu cuenta, que tambien se quitara de este
+                        dispositivo.</span>
+                </div>
+                <div class="remove-account__data-container">
+                    <div class="remove-account__user-icon"></div>
+                    <div class="remove-account__info-user">
+                        <span class="remove-account__name-user">Invitado</span>
+                        <span class="remove-account__email-user">@invitado</span>
+                    </div>
+
+                </div>
+            </div>
+            <button class="remove-account__btn">
+                <span class="remove-account__btn-info">
+                    Siguiente
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="close-main">
+        <button class="close-main__btn-remove">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="close-main__container">
+            <figure class="close-main__img-container">
+
+            </figure>
+            <div class="close-main__text-container">
+                <span class="close-main__text">
+                    Quitar cuenta de la TV
+                </span>
+                <span class="close-main__text">
+                    Puedes volver a acceder y retomar lo que estabas haciendo
+                </span>
+            </div>
+            <div class="close-main__btn-container">
+                <button class="close-main__btn close-main__btn--click">
+                    Quitar
+                </button>
+                <button class="close-main__btn close-main__btn--cancelar">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <dialog class="login" id="login-js">
+
+        <div class="login__main">
+
+            <div class="login__close-container">
+
+                <span>
+
+                    Iniciar sesion
+
+                </span>
+
+                <button class="login__btn-close">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+            <figure class="login__icon-container">
+
+            </figure>
+
+            <div class="login__text-container">
+
+                <span class="login__text" id="login-name">
+
+                </span>
+
+                <span class="login__text" id="login-email">
+
+                </span>
+
+            </div>
+
+            <div class="login__input-container">
+
+                <input type="password" class="login__pass" placeholder="Ingrese contraseña" id="pass">
+
+                <i class="fa-regular fa-eye" id="eyes"></i>
+
+            </div>
+
+            <span class="login__not-valide">
+                Contraseña incorrecta
+            </span>
+
+            <div class="login__btn-container">
+
+            <button class="login__btn-login">
+
+                INGRESAR
+
+            </button>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+    <div class="user-loader">
+
+        <div class="user-loader__container">
+
+            <div class="user-loader__container-element">
+
+            <figure class="user-loader__icon-container">
+
+            </figure>
+
+            </div>
+
+            <div class="user-loader__data-container">
+                <span class="user-loader__data-name">
+                    
+                </span>
+
+                <span class="user-loader__data-text">
+                    Estamos preparando tu perfil...
+                </span>
+            </div>
+
+            <div class="loader-mobile">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="user-youtube">
+
+        <figure class="user-youtube__logo-container">
+            <img src="img/tv-logo.png" alt="" class="user-youtube__logo">
+        </figure>
+
+        <span class="user-youtube__text"></span>
+
+        <div class="user-youtube__user-container">
+
+            <div class="user-youtube__user" id="user01">
+                <figure class="user-youtube__icon-container">
+                    <img src="img/perfil-1.jpg" alt="" class="user-youtube__icon">
+                </figure>
+                <div class="user-youtube__text-container">
+                    <span class="user-youtube__user-name" id="userName1"></span>
+                    <span class="user-youtube__user-email" id="userEmail1"></span>
+                </div>
+                <div class="user-youtube__btn-container">
+                    <button class="user-youtube__btn" id="user1">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-youtube__user" id="user02">
+                <figure class="user-youtube__icon-container">
+                    <img src="img/perfil-2.jpg" alt="" class="user-youtube__icon">
+                </figure>
+                <div class="user-youtube__text-container">
+                    <span class="user-youtube__user-name" id="userName2"></span>
+                    <span class="user-youtube__user-email" id="userEmail2"></span>
+                </div>
+                <div class="user-youtube__btn-container">
+                    <button class="user-youtube__btn" id="user2">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-youtube__user" id="user03">
+                <figure class="user-youtube__icon-container">
+                    <img src="img/user3.jpg" alt="" class="user-youtube__icon">
+                </figure>
+                <div class="user-youtube__text-container">
+                    <span class="user-youtube__user-name" id="userName3"></span>
+                    <span class="user-youtube__user-email" id="userEmail3"></span>
+                </div>
+                <div class="user-youtube__btn-container">
+                    <button class="user-youtube__btn" id="user3">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="user-youtube__user">
+                <figure class="user-youtube__icon-container">
+                    <img src="img/invitadouser.avif" alt="" class="user-youtube__icon">
+                </figure>
+                <div class="user-youtube__text-container--invitado">
+                    <span class="user-youtube__user-name--invitado">
+                        Invitado
+                    </span>
+                    <span class="user-youtube__user-email--invitado">
+                        user invitado
+                    </span>
+                </div>
+                <div class="user-youtube__btn-container--invitado">
+                    <button class="user-youtube__btn--invitado">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="user-youtube__option-container">
+
+            <button class="user-youtube__option" id="open-add-account">
+                <i class="fa-solid fa-user-plus"></i>
+                <span class="user-youtube__option__text--a"></span>
+            </button>
+
+            <button class="user-youtube__option" id="option-kids">
+                <i class="fa-brands fa-youtube"></i>
+                <span class="user-youtube__option__text--b"></span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
